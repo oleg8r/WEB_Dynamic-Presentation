@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!--
+    author:        Oleg Savelev
+    student ID:    060494135
+    created for:   WEB222 Assignment #3
+    due date:      November 21, 2020
+    https://en.wikipedia.org/wiki/Cave_painting
+-->
+
+<html lang="en" id="top">
+<!--
+    The above html tag signifies the beginning of this web page.
+    Top ID is used to get back to the top of the page from different places on the page.
+-->
+
+    <!--HEAD-->
+    <head>
+        
+        <meta charset="UTF-8" />
+        <!-- 
+		    1) The above meta tag tells the web browser of the character encoding (UTF-8 = Unicode Transformation Format-8) selected for this web page 
+            See http://www.iana.org/assignments/character-sets/character-sets.xml for more character sets.
+            2) This meta tag is mandatory for the assignment submission.
+	    -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--
+            1) The above meta tag tells the web browser to set the viewport of the web page as part of responsive web design.
+            To be properly displayed on different size monitors.
+            2) This meta tag is mandatory for the assignment submission.
+        -->
+
+	    <!--meta http-equiv="refresh" content="0; url=http://www.google.ca/" /-->
+	    <!-- 
+            The above meta tag tells the web browser to load a different web page after zero seconds (immediately.)
+            Please use this meta tag if the website address is changed. Just replace "http://www.google.ca/" with a new website address.
+	    -->
+	
+        <meta name="description" content="Course: WEB222 Topic: Assignment #3">
+        <!-- 
+            The above meta tag provides the web browser a short description of this web page.
+            Several browsers, like Firefox and Opera, use this as the default description of bookmarked pages.
+        -->
+        
+        <meta name="author" content="Oleg Savelev">
+        <!--The above meta tag provides the web browser a short description of this web page.-->
+
+
+        <title>Presentation Assignment by Oleg Savelev</title>
+        <!--The value in the above title tag will appear in the title bar of the web browser.-->
+    
+        <!--STYLE & SCRIPT-->
+        <style> @import "externalCSS.css"; </style>
+
+    </head>
+
+
+    <!--BODY-->
+    <body class="background-image" onload="fHomePgImgWInfo()">      <!-- This function loads the home page image and its description on page load -->
+
+        <!--Header. The top part of the website with all the main titles-->
+        <header >
+
+            <h1 class="glowing" id="container1"><b id="transition1">Cave painting</b></h1>
+            <h2 class="glowing" id="container1b"><b id="transition1b">Prehistoric art <sub> <i>by Oleg Savelev</i></sub></b></h2>
+
+        </header>       
+        <br>
+        <br>
+
+        <!-- The expanding image container -->
+        <main class="mainContainer">
+
+            <article class="column1">
+                <h6>&nbsp;</h6>
+
+                <!-- Expanded image Option 1-->
+                <img id="expandedImg"  class="iframe overlayImage filterCombined trans" src="SantaCruz-CuevaManos-P2210651b.jpg" alt="Cave painting">
+
+                <!-- Expanded image Option 2-->
+                <!--iframe id="expandedImg" name="container" src="GuaTewet_tree_of_life-LHFage.jpg"> </iframe-->
+
+                <!-- Image text -->
+                <p id="imgInfo" class="overlayText Absolute-Center"> </p>
+
+            </article>
+
+            <article class="column2">
+                <h6>&nbsp;</h6>
+
+                    <ul>
+
+                        <li id="pointer0" class="row">
+                        <!--li id="pointer0" class="row" onmouseenter="fPtrOnMouseEnter(this)" onmouseleave="fPtrOnMouseLeave(this)"-->
+                            <img id="0" class="thumbnail filterCombined trans pointerCursor" src="SantaCruz-CuevaManos-P2210651b.jpg" alt="Image Not Found" title="Cueva Manos from Santa Cruz" onmouseenter="fThumbOnMouseEnter(this)" onmouseleave="fThumbOnMouseLeave(this)" onclick="fCleanUp(); fExpandImage(0)"/>
+                        </li>
+
+                        <li id="pointer1" class="row">
+                            <img id="1" class="thumbnail filterCombined trans pointerCursor" src="GuaTewet_tree_of_life-LHFage.jpg" alt="Image Not Found" title="Gua Tewet Tree of Life" onmouseenter="fThumbOnMouseEnter(this)" onmouseleave="fThumbOnMouseLeave(this)" onclick="fCleanUp(); fExpandImage(1)"/>
+                        </li>
+            
+                        <li id="pointer2" class="row">
+                            <img id="2" class="thumbnail filterCombined trans pointerCursor" src="Bestias11.jpg" alt="Image Not Found" title="Bestias in the Cave" onmouseenter="fThumbOnMouseEnter(this)" onmouseleave="fThumbOnMouseLeave(this)" onclick="fCleanUp(); fExpandImage(2)"/>
+                        </li>
+            
+                        <li id="pointer3" class="row">
+                            <img id="3" class="thumbnail filterCombined trans pointerCursor" src="20,000_Year_Old_Cave_Paintings_Hyena.png" alt="Image Not Found" title="20,000 Year Old Cave Paintings: Hyena" onmouseenter="fThumbOnMouseEnter(this)" onmouseleave="fThumbOnMouseLeave(this)" onclick="fCleanUp(); fExpandImage(3)"/>
+                        </li>
+            
+                        <li id="pointer4" class="row">
+                            <img id="4" class="thumbnail filterCombined trans pointerCursor" src="Rhinos_Chauvet_Cave.jpg" alt="Image Not Found" title="Rhinos in Chauvet Cave" onmouseenter="fThumbOnMouseEnter(this)" onmouseleave="fThumbOnMouseLeave(this)" onclick="fCleanUp(); fExpandImage(4)"/>
+                        </li>
+                        
+                        <li id="pointer5" class="row">
+                            <img id="5" class="thumbnail filterCombined trans pointerCursor" src="Hands_in_Pettakere_Cave_DYK_crop.jpg" alt="Image Not Found" title="Hands in Pettakere Cave" onmouseenter="fThumbOnMouseEnter(this)" onmouseleave="fThumbOnMouseLeave(this)" onclick="fCleanUp(); fExpandImage(5)"/>
+                        </li>
+            
+                        <li id="pointer6" class="row">
+                            <img id="6" class="thumbnail filterCombined trans pointerCursor" src="Cave_of_Altamira_and_Paleolithic_Cave_Art_of_Northern_Spain-110113.jpg" alt="Image Not Found" title="Paleolithic Cave of Altamira. Northern Spain" onmouseenter="fThumbOnMouseEnter(this)" onmouseleave="fThumbOnMouseLeave(this)" onclick="fCleanUp(); fExpandImage(6)"/>
+                        </li>
+            
+                        <li id="pointer7" class="row">
+                            <img id="7" class="thumbnail filterCombined trans pointerCursor" src="Laas_Geel.jpg" alt="Image Not Found" title="Laas Geel" onmouseenter="fThumbOnMouseEnter(this)" onmouseleave="fThumbOnMouseLeave(this)" onclick="fCleanUp(); fExpandImage(7)"/>
+                        </li>
+
+                        <li id="pointer8" class="row">
+                            <img id="8" class="thumbnail filterCombined trans pointerCursor" src="2009_07_09_camino_cielo_paradise_137.jpg" alt="Image Not Found" title="Camino Cielo Paradise" onmouseenter="fThumbOnMouseEnter(this)" onmouseleave="fThumbOnMouseLeave(this)" onclick="fCleanUp(); fExpandImage(8)"/>
+                        </li>
+
+                        <li id="pointer9" class="row">
+                           <img id="9" class="thumbnail filterCombined trans pointerCursor" src="Serra_da_Capivara_-_Several_Paintings_2b.jpg" alt="Image Not Found" title="Several Paintings in Serra da Capivara" onmouseenter="fThumbOnMouseEnter(this)" onmouseleave="fThumbOnMouseLeave(this)" onclick="fCleanUp(); fExpandImage(9)"/>
+                        </li>
+
+                    </ul>
+
+            </article>
+
+        </main>
+
+        <script src="externalJavaScript.js"> </script>
+
+    </body>
+
+<!--
+    author:        Oleg Savelev
+    student ID:    060494135
+    created for:   WEB222 Assignment #3
+    due date:      November 21, 2020
+    https://en.wikipedia.org/wiki/Cave_painting
+-->
+
+</html>
